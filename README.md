@@ -1,2 +1,2 @@
 # PixelForge
-Forge stunning visuals and mint them as NFTs on-chain.
+## Forge stunning visuals and mint them as NFTs on-chain.
