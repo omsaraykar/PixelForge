@@ -1,8 +1,30 @@
+
+'use client';
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Footer from "./components/Fotter";
+import FAQSection from "./components/Faqs";
+import FeaturedNFTs from "./components/Nfts";
+import HowItWorksSection from "./components/HowItWorks";
+import AboutSection from "./components/About";
+import HeroSection from "./components/Hero";
+
+
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <div className="flex flex-col items-center h-screen">
-      <h1 className="text-4xl font-bold my-6">PixelForge</h1>
-      <p className="text-lg">Forge stunning visuals and mint them as NFTs on-chain.</p>
-    </div>
+    <main className="bg-black text-white">
+      <HeroSection />
+      <AboutSection />
+      <HowItWorksSection />
+      <FeaturedNFTs />
+      <FAQSection />
+      <Footer />
+    </main>
   );
 }
