@@ -4,12 +4,12 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "./components/Fotter";
-import FAQSection from "./components/Faqs";
-import FeaturedNFTs from "./components/Nfts";
-import HowItWorksSection from "./components/HowItWorks";
-import AboutSection from "./components/About";
-import HeroSection from "./components/Hero";
+import Footer from "@/components/landing/Footer";
+import FAQSection from "@/components/landing/Faqs";
+import FeaturedNFTs from "@/components/landing/Nfts";
+import HowItWorksSection from "@/components/landing/HowItWorks";
+import AboutSection from "@/components/landing/About";
+import HeroSection from "@/components/landing/Hero";
 
 
 export default function Home() {

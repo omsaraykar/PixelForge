@@ -15,7 +15,7 @@ export default function FeaturedNFTs() {
             data-aos-delay="100"
           >
             <img
-              src="https://img.freepik.com/free-vector/hand-drawn-nft-style-ape-illustration_23-2149622021.jpg?t=st=1753973547~exp=1753977147~hmac=9b4635ae6ce993a7c79a6b5c10bfe213a6e50e808f463f4d2bdc0d3bc4a5eddc&w=2000" // A visible placeholder image
+              src="https://img.freepik.com/free-vector/hand-drawn-nft-style-ape-illustration_23-2149622021.jpg?t=st=1753973547~exp=1753977147~hmac=9b4635ae6ce993a7c79a6b5c10bfe213a6e50e808f463f4d2bdc0d3bc4a5eddc&w=2000"
               alt="Naughty Ape #3021"
               className="w-full h-80 object-cover"
             />
@@ -36,6 +36,7 @@ export default function FeaturedNFTs() {
             data-aos-delay="200"
           >
             <img
+              alt="Dabb Boy #4411"
               src="https://img.freepik.com/free-vector/cute-cool-boy-dabbing-pose-cartoon-vector-icon-illustration-people-fashion-icon-concept-isolated_138676-5680.jpg?t=st=1753973062~exp=1753976662~hmac=ba2152a1d77c8a7eb937a3bab1ae6f74c01bfb708843695f70b53c5b377f5a09&w=2000"
               className="w-full h-80 object-cover"
             />
