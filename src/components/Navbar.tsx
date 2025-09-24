@@ -2,11 +2,25 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { data: session } = useSession()
+
+  // 🔹 Helper function to open NextAuth in popup
+  const openAuthPopup = (provider: string) => {
+    const width = 500
+    const height = 600
+    const left = window.innerWidth / 2 - width / 2
+    const top = window.innerHeight / 2 - height / 2
+
+    window.open(
+      `/api/auth/signin/${provider}`,
+      'SignIn',
+      `width=${width},height=${height},top=${top},left=${left}`
+    )
+  }
 
   return (
     <nav className="bg-black/90 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
@@ -45,13 +59,13 @@ export default function Navbar() {
             {!session ? (
               <>
                 <button
-                  onClick={() => signIn()}
+                  onClick={() => openAuthPopup('google')}
                   className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
                 >
                   Login
                 </button>
                 <button
-                  onClick={() => signIn()}
+                  onClick={() => openAuthPopup('google')}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105"
                 >
                   Sign Up
@@ -128,7 +142,7 @@ export default function Navbar() {
                     <button
                       onClick={() => {
                         setIsMenuOpen(false)
-                        signIn()
+                        openAuthPopup('google')
                       }}
                       className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-colors w-full text-left"
                     >
@@ -137,7 +151,7 @@ export default function Navbar() {
                     <button
                       onClick={() => {
                         setIsMenuOpen(false)
-                        signIn()
+                        openAuthPopup('google')
                       }}
                       className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white block px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 mt-2 w-full text-left"
                     >
